@@ -1,0 +1,6 @@
+{
+  "name": "Company Valuation Platform",
+  "description": "A web platform to calculate company valuation for non-listed companies, supporting IFRS compliance principles, country and sector selection, and bilingual (Arabic/English) interface.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

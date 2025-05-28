@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Valuation Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"},
+            secondary: {"50":"#f8fafc","100":"#f1f5f9","200":"#e2e8f0","300":"#cbd5e1","400":"#94a3b8","500":"#64748b","600":"#475569","700":"#334155","800":"#1e293b","900":"#0f172a","950":"#020617"}
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1",
+    "recharts": "https://esm.sh/recharts@^2.15.3",
+    "pdfmake/build/pdfmake.js": "https://esm.sh/pdfmake@0.2.10/build/pdfmake.js",
+    "pdfmake/build/vfs_fonts.js": "https://esm.sh/pdfmake@0.2.10/build/vfs_fonts.js",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "pdfmake/": "https://esm.sh/pdfmake@^0.2.20/"
+  }
+}
+</script>
+<style>
+  /* Print-specific styles */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact; /* Ensures background colors and images are printed in Chrome/Safari */
+      print-color-adjust: exact; /* Standard */
+    }
+    nav, footer, .print-hide {
+      display: none !important;
+    }
+    /* Ensure main content takes up full width */
+    main {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* Adjust PageContainer for printing */
+    .max-w-7xl { /* This is PageContainer's class */
+        max-width: none !important; /* Allow full width */
+        padding: 10px !important; /* Minimal padding */
+        box-shadow: none !important;
+        background-color: white !important; /* Ensure background is white for print */
+    }
+    /* Ensure text is black for printing */
+    * {
+        color: black !important;
+        background-color: transparent !important; /* Avoid dark mode backgrounds */
+    }
+    /* Specific adjustments for charts if needed, though Recharts usually handles print well */
+    .recharts-responsive-container, .recharts-wrapper {
+        width: 100% !important;
+        height: auto !important; /* Or a fixed height suitable for print */
+    }
+  }
+</style>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
